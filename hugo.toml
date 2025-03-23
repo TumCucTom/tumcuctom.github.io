@@ -1,0 +1,131 @@
+baseURL = 'https://shashanksharma.xyz'
+languageCode = 'en'
+title = 'Shashank Sharma'
+theme = 'virgo-extended'
+
+hasCJKLanguage = true
+summaryLength = 80
+[pagination]
+  pagerSize = 10000
+enableGitInfo = true
+enableRobotsTXT = true
+timeZone = 'Asia/Kolkata'
+ignoreFiles = ['\\.obsidian/*']
+
+
+[taxonomies]
+  category = 'categories'
+  tag = 'tags'
+
+[params]
+    author = 'Shashank'
+    version = 'v.2024.11'
+    slogan = 'Just a guy, who is engineer for fun'
+    description = 'Backend Engineer | Anime Lover | Artist'
+    startDate = 2020
+    logo = '/svg/logo.svg'
+    en = true
+    dark = false
+    isSingleColumnOfPostList = true
+    isShowPrevNextLink = true
+    hasActiveFloatingBox = true
+    isShowRelativePosts = false
+    isShowMinishipBoxOfNav = false
+    isShowShipBoxOfNav = true
+    isShowLocalSearch = true
+    isShowRecentPostsOfNav = true
+    hasActiveAnimate = true
+
+    # Test for later
+    hasActiveCool = false
+    coolBackground = 'color.jpg'
+    coolOpacity = 0.69
+    coolSaturate = '180%'
+    coolBlur = '6px'
+
+    hasFoldAllCodeBlocks = false
+
+    [params.git_info]
+    host = "github"
+    user = "shashank-sharma"
+    repo = "shashank-sharma.github.io"
+
+    [params.video]
+        notImgButWords = false
+        src = ['/video/tower.mp4',
+               '/video/main-tower.mp4',
+               '/video/first-house.mp4',
+               '/video/zero-home.mp4',
+               '/video/tower-water.mp4']
+        width = 0
+        words = ""
+
+    [params.img]
+        notImgButWords = false
+        src = 'cat.svg'
+        width = 0
+        words = ""
+
+    [params.contact]
+        email = 'shashank.sharma98@gmail.com'
+        github = 'shashank-sharma'
+        twitter = 'shashank_py'
+        instagram = 'shashank.py'
+        youtube = 'ShashankSharma98'
+        color = '#696969'
+
+        [params.contact.config]
+            target = '_self'
+            color = '#8a8a8a'
+
+    [params.utterances]
+        active = false
+        repo = "loveminimal/comment"
+        issueTerm = "pathname"
+        theme = "github-light"
+        crossorigin = "anonymous"
+
+    [params.analytics]
+        provider = "umami"
+        umamiWebsiteId = "7a913bd4-fb60-4872-b970-761338fbc7d0"
+        umamiServerUrl = "umami.shashank-sharma.xyz"
+
+    [params.backend]
+        deviceApiEndpoint = "https://backend.shashanksharma.xyz/api/track/getapp"
+
+    [params.giscus]
+        active = true
+        repo = "shashank-sharma/shashank-sharma.github.io"
+        repoId = "MDEwOlJlcG9zaXRvcnk3OTgzNjY4Mw=="
+        category="General"
+        categoryId="DIC_kwDOBMI2C84CoWhh"
+        mapping = "title"
+        inputPosition = "bottom"
+        theme = "noborder_light"
+        crossorigin = "anonymous"
+        lang = "en"
+
+[markup]
+    [markup.asciidocExt]
+        preserveTOC = true
+    [markup.highlight]
+        anchorLineNos = false
+        codeFences = true
+        guessSyntax = false
+        hl_Lines = ''
+        hl_inline = false
+        lineAnchors = ''
+        lineNoStart = 1
+        lineNos = false
+        lineNumbersInTable = true
+        noClasses = true
+        noHl = false
+        style = 'emacs'
+        tabWidth = 4
+    [markup.tableOfContents]
+        endLevel = 3
+        ordered = false
+        startLevel = 2
+    [markup.goldmark]
+        [markup.goldmark.renderer]
+            unsafe = true
