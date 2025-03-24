@@ -24,9 +24,10 @@ ignoreFiles = ['\\.obsidian/*']
     description = 'Entrepreneur | Athlete | Developer | Student'
     startDate = 2025
     logo = 'img/tri.png'
+    width = 100
     en = true
     dark = false
-    isSingleColumnOfPostList = true
+    isSingleColumnOfPostList = false
     isShowPrevNextLink = true
     hasActiveFloatingBox = true
     isShowRelativePosts = true
@@ -62,13 +63,13 @@ ignoreFiles = ['\\.obsidian/*']
 
     [params.img]
         notImgButWords = false
-        src = 'cat.svg'
-        width = 0
+        src = '/img/tri.png'
+        width = 200
         words = ""
 
     [params.contact]
         email = 'tokbale@outlook.com'
-        github = 'thomasbale'
+        github = 'tumcuctom'
         instagram = 'tom_ba1e'
         color = '#696969'
 
@@ -84,7 +85,7 @@ ignoreFiles = ['\\.obsidian/*']
         crossorigin = "anonymous"
 
     [params.giscus]
-        active = true
+        active = false
         repo = "shashank-sharma/shashank-sharma.github.io"
         repoId = "MDEwOlJlcG9zaXRvcnk3OTgzNjY4Mw=="
         category="General"

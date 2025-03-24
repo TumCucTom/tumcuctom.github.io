@@ -25,8 +25,9 @@
             style="background: {{ with .Site.Params.img.background }}{{.}}{{end}};">
             {{if .Site.Params.Logo }}
             <a target="_self" href="/">
-                <img class="header-logo" id="header-logo" src="{{ .Site.Params.Logo }}"
-                    width="{{ with .Site.Params.img.width }}{{.}}{{end}}" />
+                <img class="header-logo" id="header-logo"
+                     src="{{ .Site.Params.Logo }}"
+                     style="width: clamp(200px, 30vw, 80px);" />
             </a>
             {{ end }}
         </div>
