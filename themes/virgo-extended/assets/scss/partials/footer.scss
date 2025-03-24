@@ -1,0 +1,88 @@
+.container-main {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#footer {
+    flex-shrink: 0;
+    background: $footer-bg-color;
+    padding: 16px $site-padding-lr 32px;
+    margin-top: 64px;
+    z-index: 2;
+    position: relative;
+    border-top: 1px solid #eee;
+}
+
+.container-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.14rem;
+}
+
+.info {
+    color: #939393;
+    flex: 1;
+}
+
+.info a {
+    color: #939393;
+}
+
+.info.left {
+    text-align: left;
+}
+
+.info.center {
+    text-align: center;
+}
+
+.info.right {
+    text-align: right;
+}
+
+.icp a {
+    color: $link-color;
+}
+
+.beian {
+    margin: 0 auto;
+    padding: 20px 0 4px;
+    display: flex;
+    justify-content: center;
+}
+
+.beian a {
+    display: inline-block;
+    text-decoration: none;
+    height: 20px;
+    line-height: 20px;
+    padding-right: 12px;
+    color: #939393;
+}
+
+.beian a img {
+    float: left;
+}
+
+.beian a p {
+    float: left;
+    height: 20px;
+    line-height: 20px;
+    margin: 0 0 0 5px;
+    color: #939393;
+}
+
+@media (max-width: 768px) {
+    .container-footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .info.left, .info.center, .info.right {
+        width: 100%;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+}

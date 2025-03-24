@@ -1,0 +1,306 @@
+.container-home {
+    font-family: $font-family--some, $font-family--base;
+
+    // style of `content/_index.md`
+    // some customizations of content of md
+    .content-md {
+        padding-top: 24px;
+
+        p,
+        li,
+        td {
+            & > code {
+                color: $code-inline-color;
+            }
+        }
+
+        .highlight {
+
+            margin: 16px 0;
+            border-top: 2px solid $highlight-color;
+            border-bottom: 2px solid $highlight-color;
+            padding: 2px 0;
+            font-size: 0.14rem;
+            overflow: hidden;
+            &:hover {
+                overflow: auto;
+            }
+
+            pre {
+                padding-top: 0;
+            }
+        }
+
+        pre {
+            font-size: 0.14rem;
+            border-top: 1px solid $highlight-color;
+            border-bottom: 1px solid $highlight-color;
+
+            padding: 12px;
+            overflow: hidden;
+
+            &:hover {
+                overflow: auto;
+            }
+
+            .lang {
+                cursor: pointer;
+                margin-bottom: 16px;
+                padding: 4px 0px;
+                border-bottom: 1px dashed $gray-500;
+            }
+        }
+
+        em {
+            font-style: italic;
+        }
+    }
+
+    .content {
+        text-align: center;
+        .desc {
+            img {
+                max-width: 100%;
+            }
+
+            .words {
+                box-sizing: border-box;
+                font-size: .18rem;
+                color: $gray-500;
+                max-width: 600px;
+                // min-height: 269px;
+                padding: 48px 32px;
+                border-radius: 10px;
+                margin: 120px 0 160px;
+                background: $gray-white-400;
+            }
+        }
+    }
+}
+
+.device-container {
+    position: absolute;
+    display: flex;
+    padding-top: 20px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 2;
+}
+
+.holo-badge {
+    font-family: 'Roboto', sans-serif;
+    width: 300px;
+    background: white;
+    border-radius: 16px;
+    backdrop-filter: blur(20px);
+    border: 0;
+    padding: 15px;
+    color: black;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 16px 0 rgba(117, 120, 172, 0.40);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 0;
+  }
+  
+  .holo-badge:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px 0 rgba(31, 38, 135, 0.50);
+  }
+
+  .holo-badge.not-available {
+    opacity: 0.9;
+    filter: grayscale(100%);
+}
+
+  .holo-badge.not-available .holo-glow {
+      display: none;
+  }
+
+  .holo-status-dot.not-available {
+      background-color: #888; /* Gray color for not available */
+  }
+
+  
+  .holo-content {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .holo-glow {
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    right: -100%;
+    bottom: -100%;
+    background: conic-gradient(
+      from 230.29deg at 51.63% 52.16%,
+      rgb(36, 0, 255) 0deg,
+      rgb(0, 135, 255) 67.5deg,
+      rgb(108, 39, 157) 198.75deg,
+      rgb(24, 38, 163) 251.25deg,
+      rgb(54, 103, 196) 301.88deg,
+      rgb(105, 30, 255) 360deg
+    );
+    opacity: 0.2;
+    filter: blur(20px);
+    animation: holo-glow-animate 15s linear infinite;
+  }
+
+  @keyframes holo-glow-animate {
+    0% {
+      transform: rotate(0deg) scale(1);
+    }
+    25% {
+      transform: rotate(90deg) scale(1.1);
+    }
+    50% {
+      transform: rotate(180deg) scale(1);
+    }
+    75% {
+      transform: rotate(270deg) scale(1.1);
+    }
+    100% {
+      transform: rotate(360deg) scale(1);
+    }
+  }
+  
+  .holo-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .holo-icon {
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    margin-right: 10px;
+    color: #00ffff;
+  }
+
+  .holo-current-app {
+    position: absolute;
+    margin: 0;
+    bottom: 0;
+    right: 0;
+    font-size: 0.80em;
+  }
+  
+  .holo-title {
+    font-size: 1.2em;
+    font-weight: 500;
+    margin: 0;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.3);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .holo-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85em;
+  }
+  
+  .holo-sync {
+    margin-top: 2px;
+    margin-bottom: 0;
+    opacity: 0.8;
+    font-size: 0.75em;
+  }
+  
+  .holo-status {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  
+  .holo-status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 6px;
+  }
+  
+  .holo-status-dot.online {
+    background-color: #00ff00;
+    box-shadow: 0 0 5px #00ff00;
+    animation: pulse 2s infinite;
+  }
+  
+  .holo-status-dot.offline {
+    background-color: #ff0000;
+    box-shadow: 0 0 5px #ff0000;
+  }
+  
+  .holo-status-text {
+    font-weight: 500;
+  }
+  
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.4); }
+    70% { box-shadow: 0 0 0 6px rgba(46, 204, 113, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(46, 204, 113, 0); }
+  }
+  
+  @media (max-width: 980px) {
+    .device-container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .holo-header {
+        margin-bottom: 0;
+    }
+
+    .holo-badge {
+      width: 100%;
+      max-width: 250px;
+      margin-bottom: -40px;
+      transition: all 0.3s ease, margin-bottom 0.3s ease;
+      padding: 12px;
+      border-radius: 12px;
+    }
+
+    .holo-badge:last-child {
+        margin-bottom: 0;
+    }
+  
+    .holo-icon {
+      width: 24px;
+      height: 24px;
+      min-width: 24px;
+      margin-right: 8px;
+    }
+  
+    .holo-title {
+      font-size: 0.8em;
+    }
+  
+    .holo-body {
+      flex-direction: column;
+      align-items: flex-start;
+      font-size: 0.6em;
+    }
+  
+    .holo-status-text {
+      flex-grow: 1;
+      text-align: right;
+    }
+  }
+
+  @media (min-width: 720px) {
+    .holo-badge {
+      max-width: 350px;
+    }
+  }

@@ -1,0 +1,189 @@
+#header {
+    // doks header-bar
+    background-clip: padding-box; /* Prevent background from leaking into the border */
+
+    /* Add pseudo-element */
+    overflow: hidden; /* Ensure pseudo-element doesn't overflow */
+
+    z-index: 10;
+    position: sticky;
+    padding: 0 $site-padding-lr;
+
+    .header-title {
+      font-size: 1.4em;
+      font-weight: 500;
+    }
+
+    .home-container-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 40px;
+
+        .img-wrapper-page {
+            width: 80px !important;
+            margin-left: -50px !important;
+        }
+
+        .img-wrapper {
+            padding: 5px;
+            width: 100px;
+            box-sizing: border-box;
+
+            .header-logo {
+                max-width: 100%;
+                height: auto;
+                pointer-events: auto;
+                transition: all .2s ease-in-out;
+            }
+
+            .header-logo.inverted {
+                filter: invert(100%);
+            }
+
+            .header-logo:hover {
+                filter: drop-shadow(3px 3px 0 rgb(134, 134, 134));
+            }
+
+            .header-logo.inverted:hover {
+                filter: invert(100%) drop-shadow(3px 3px 0 rgb(134, 134, 134));
+            }
+        
+            .header-logo:active {
+                transform: scale(1.2);
+            }
+        }
+
+        // 面包屑导航条
+        .container-breadcrumb-nav {
+            padding-bottom: 8px;
+
+            .breadcrumb-nav-bar {
+                display: flex;
+                font-size: 0.12rem;
+
+                a {
+                    white-space: break-spaces;
+                    overflow: hidden;
+
+                    display: block;
+                    color: rgba(90,41,228, .8);
+                    background: $gray-white-300;
+                    margin-right: 8px;
+                    padding: 4px 8px;
+                    border-radius: 0 12px 0 8px;
+                }
+
+                .active a {
+                    color: #5a29e4;
+                }
+            }
+        }
+
+        #toc {
+            display: none;
+        }
+    }
+
+    .container-header {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        max-width: 700px;
+        margin: 0 auto;
+
+        .left {
+            position: absolute;
+            left: 0;
+            .img-wrapper {
+                padding: 5px;
+                width: 100px;
+                box-sizing: border-box;
+
+                transition: 0.5s all ease;
+
+                img {
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+        }
+
+        .right {
+            .some {
+                position: relative;
+                padding: 4px 0px 6px 0px;
+                #light-dark {
+                    cursor: pointer;
+                }
+            }
+
+            // 仅在移动端设备显示
+            #toc {
+                display: none;
+            }
+        }
+    }
+}
+
+#header::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: -1; /* Place it behind the content */
+    height: 10px; /* Height of animated border */
+    background-image: linear-gradient(90deg, rgb(13, 110, 253), rgb(142, 214, 251) 50%, rgb(211, 46, 157));
+    background-size: 300% 100%; /* Extend the background to allow animation effect */
+    animation: slideGradient 3s infinite linear alternate;
+}
+
+@keyframes slideGradient {
+    0% {
+        background-position: 100% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 80px;
+    background-color: #4f4c4c;
+    color: #fff;
+    text-align: center;
+    padding: 3px 0;
+    border-radius: 3px;
+    font-size: 0.12rem;
+   
+    position: absolute;
+    transition: opacity 0.6s;
+    top: -110%;
+    left: -50%;
+    z-index: 3;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+
+  .title {
+    font-size: 0.4rem;
+    font-weight: 800;
+    text-align: left;
+    line-height: 0.5rem;
+  }
+
+
+  h2.headline {
+    font-size: 0.3rem;
+    font-weight: 600;
+    text-align: left;
+    line-height: 0.5rem;
+  }

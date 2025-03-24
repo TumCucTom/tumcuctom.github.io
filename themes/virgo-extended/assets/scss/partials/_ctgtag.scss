@@ -1,0 +1,49 @@
+.container-ctgtag {
+	padding-bottom: 8px;
+	display: flex;
+    align-items: center;
+    flex-basis: 100%;
+
+	.taxonomy {
+		display: flex;
+
+		.ctg {
+			margin-right: 4px;
+		}
+
+		.ctg, .tag {
+			a {
+				font-size: .10rem;
+				color: $gray-500;
+				background: $white-000;
+				padding: 4px 8px 4px;
+				border-radius: 4px;
+				margin-right: 4px;
+				text-decoration: none;
+			}
+
+			.category-tag {
+				font-size: .10rem;                
+				color: $gray-500;
+				background: $gray-white-600;
+				padding: 4px 8px 4px;
+				border-radius: 4px;
+				margin-right: 4px;
+				border: 1px solid $gray-500;
+			}
+		}
+
+		.tag a {
+			border: 1px solid $gray-500;
+		}
+	}
+}
+
+@media (max-width: 900px) {
+    .container-ctgtag .taxonomy .tag {
+		a, .category-tag {
+			padding: 2px 4px;
+			font-size: .11rem;
+		}
+	}
+}
