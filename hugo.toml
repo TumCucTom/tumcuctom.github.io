@@ -1,6 +1,6 @@
-baseURL = 'https://shashanksharma.xyz'
+baseURL = 'https://thomasbale.com'
 languageCode = 'en'
-title = 'Shashank Sharma'
+title = 'Thomas Bale'
 theme = 'virgo-extended'
 
 hasCJKLanguage = true
@@ -47,8 +47,8 @@ ignoreFiles = ['\\.obsidian/*']
 
     [params.git_info]
     host = "github"
-    user = "shashank-sharma"
-    repo = "shashank-sharma.github.io"
+    user = "tumcuctom"
+    repo = "tumcuctom.github.io"
 
     [params.video]
         notImgButWords = false
@@ -67,11 +67,9 @@ ignoreFiles = ['\\.obsidian/*']
         words = ""
 
     [params.contact]
-        email = 'shashank.sharma98@gmail.com'
-        github = 'shashank-sharma'
-        twitter = 'shashank_py'
-        instagram = 'shashank.py'
-        youtube = 'ShashankSharma98'
+        email = 'tokbale@outlook.com'
+        github = 'thomasbale'
+        instagram = 'tom_ba1e'
         color = '#696969'
 
         [params.contact.config]
