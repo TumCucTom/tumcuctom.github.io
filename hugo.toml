@@ -1,4 +1,4 @@
-baseURL = 'https://thomasbale.com'
+baseURL = 'https://me.thomasbale.com'
 languageCode = 'en'
 title = 'Thomas Bale'
 theme = 'virgo-extended'
@@ -18,19 +18,19 @@ ignoreFiles = ['\\.obsidian/*']
   tag = 'tags'
 
 [params]
-    author = 'Shashank'
+    author = 'Thomas'
     version = 'v.2024.11'
-    slogan = 'Just a guy, who is engineer for fun'
-    description = 'Backend Engineer | Anime Lover | Artist'
-    startDate = 2020
+    slogan = 'Entrepreneur | Athlete | Developer | Student'
+    description = 'Entrepreneur | Athlete | Developer | Student'
+    startDate = 2025
     logo = '/svg/logo.svg'
     en = true
     dark = false
     isSingleColumnOfPostList = true
     isShowPrevNextLink = true
     hasActiveFloatingBox = true
-    isShowRelativePosts = false
-    isShowMinishipBoxOfNav = false
+    isShowRelativePosts = true
+    isShowMinishipBoxOfNav = true
     isShowShipBoxOfNav = true
     isShowLocalSearch = true
     isShowRecentPostsOfNav = true
@@ -82,14 +82,6 @@ ignoreFiles = ['\\.obsidian/*']
         issueTerm = "pathname"
         theme = "github-light"
         crossorigin = "anonymous"
-
-    [params.analytics]
-        provider = "umami"
-        umamiWebsiteId = "7a913bd4-fb60-4872-b970-761338fbc7d0"
-        umamiServerUrl = "umami.shashank-sharma.xyz"
-
-    [params.backend]
-        deviceApiEndpoint = "https://backend.shashanksharma.xyz/api/track/getapp"
 
     [params.giscus]
         active = true
